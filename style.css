@@ -81,3 +81,7 @@ table h4 {
 	letter-spacing: -.75;
 	font-size: 14px;
 }
+
+.rating {
+	text-align: right;
+}
