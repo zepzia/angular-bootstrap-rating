@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+	<meta charset="utf-8">
+	<title>Rate Media Bias</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/less/bootstrap.less">,
+    <link rel="stylesheet" type="text/css" href="'bower_components/bootstrap/dist/js/bootstrap.js'">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular/app.js"></script>
+</head>
+<body>
+<div class="container">
+	<div ng-controller="RatingDemoCtrl">
+	    <h4>Rating</h4>
+	    <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['100%','90%','80%','70%', '60%', '50%', '40%', '30%', '20%', '10%', 'Neutral', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%']" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'" aria-labelledby="custom-icons-1" style="font-size: 30px"></span>
+	    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+
+	  
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript" src="'bower_components/jquery/dist/jquery.js'"></script>
+</body>
+</html>
