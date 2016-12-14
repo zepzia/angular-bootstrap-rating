@@ -2,7 +2,7 @@
 <html lang="en" ng-app="myModule">
 <head>
 	<meta charset="utf-8">
-	<title>Angular Bootstrap Rating</title>
+	<title>Angular Bootstrap</title>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/less/bootstrap.less">,
     <link rel="stylesheet" type="text/css" href="'bower_components/bootstrap/dist/js/bootstrap.js'">
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-css/css/bootstrap.min.css">
@@ -12,14 +12,15 @@
 </head>
 <body>
 <div class="container">
-	<div ng-controller="RatingDemoCtrl">
-	    <h4>Rating</h4>
-	    <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['100%','90%','80%','70%', '60%', '50%', '40%', '30%', '20%', '10%', 'Neutral', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%']" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'" aria-labelledby="custom-icons-1" style="font-size: 30px"></span>
-	    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+    <div ng-controller="RatingDemoCtrl">
+        <h4>Rating</h4>
+        <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="titlesw" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'" aria-labelledby="custom-icons-1" style="font-size: 30px"></span>
+        <span class="label" ng-class="{'label-info': percent<=48, 'label-danger': percent>=56 && percent<110, 'label-success': percent<=50 && percent>=50}" ng-show="overStar && !isReadonly">Votes: {{selectedTitle}} (Average:{{percent}})</span>
 
-	  
-	</div>
+
+    </div>
 </div>
+
 
 
 
