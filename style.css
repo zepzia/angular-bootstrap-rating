@@ -1,0 +1,83 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	padding-top: 40px;
+}
+
+/* Navigation */
+
+.navbar-brand {
+  margin-top: -8px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+/* Jumbotron */
+
+.jumbotron {
+	margin: 0;
+	background: url('white-noise.gif');
+	height: 300px;
+	padding-top: 50px;
+}
+	
+.jumbotron h1 {
+	padding: 0 20px;
+	color: white;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.jumbotron h4 {
+	padding: 5px 20px;
+	background-color: white;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+
+
+}
+
+.fa-newspaper-o {
+    padding: 0 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.fa-newspaper-o:hover{
+    padding: 0 10px;
+    cursor: pointer;
+    color: #dbdbdb;
+}
+
+table {
+	width: 100%;
+	border-color: 1px #cecece;
+	padding: 10px;
+
+}
+
+table h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	letter-spacing: -1px;
+}
+
+.outlet {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 900;
+	letter-spacing: -.75;
+	font-size: 14px;
+}
