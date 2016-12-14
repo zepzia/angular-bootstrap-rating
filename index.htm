@@ -15,7 +15,7 @@
     <div ng-controller="RatingDemoCtrl">
         <h4>Rating</h4>
         <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="titlesw" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'" aria-labelledby="custom-icons-1" style="font-size: 30px"></span>
-        <span class="label" ng-class="{'label-info': percent<=48, 'label-danger': percent>=56 && percent<110, 'label-success': percent<=50 && percent>=50}" ng-show="overStar && !isReadonly">Votes: {{selectedTitle}} (Average:{{percent}})</span>
+        <span class="label" ng-class="{'label-info': percent<=48, 'label-danger': percent>=56 && percent<110, 'label-default': percent<=60}" ng-show="overStar && !isReadonly">Votes: {{selectedTitle}} (Average:{{percent}})</span>
 
 
     </div>
