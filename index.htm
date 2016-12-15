@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="'bower_components/bootstrap/dist/js/bootstrap.js'">
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-css/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular/app.js"></script>
@@ -18,29 +18,26 @@
 <div class="container">
     <div ng-controller="RatingDemoCtrl">
 
-  <table>
-    <tr class="table-heading">
-      <th id="average-header"><h4>Average Rating</h4></th>
-      <th id="rate-header"><h4>Rate from (Left/Blue) - Neutral (Middle/Yellow) - (Right/Red)</h4></th>
-    </tr>
+      <table>
+        <tr class="table-heading">
+          <th id="average-header"><h4>Average Rating</h4></th>
+          <th id="rate-header"><h4>Rate from (Left/Blue) - Neutral (Middle/Yellow) - (Right/Red)</h4></th>
+        </tr>
 
-    <tr>
-      <td class="voter-average"><span class="label" ng-class="{'label-info': overStar<neutralIndex,  'label-danger': overStar>=neutralIndex}" ng-show="overStar">Average:  {{selectedTitle}}</span></td>
-      <td class="rating">
-        <!-- <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="titlesw" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'" aria-labelledby="custom-icons-1" style="font-size: 30px"></span>
-        <span class="label" ng-class="{'label-info': percent<=48, 'label-danger': percent>=56 && percent<110, 'label-default': percent<=60}" ng-show="overStar && !isReadonly">Votes: {{selectedTitle}} (Average:{{percent}})</span> -->
-
-
-        <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="selectedTitle = titlesw[rate-1];overStar=rate+1" titles="titlesw" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'" aria-labelledby="custom-icons-1" ></span>      
-        <span class="label" ng-class="{'label-info': overStar<neutralIndex, 'label-danger': overStar>neutralIndex}" ng-show="overStar">Your Vote:  {{selectedTitle}}</span>
-
-
-        </td>
-    </tr>
-</table>
+        <tr>
+          <td class="voter-average"><span class="label" ng-class="{'label-info': overStar<neutralIndex,  'label-danger': overStar>=neutralIndex}" ng-show="overStar">Average:  {{selectedTitle}}</span></td>
+          
+          <td class="rating">
+            <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="selectedTitle = titlesw[rate-1];overStar=rate+1" titles="titlesw" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'" aria-labelledby="custom-icons-1" ></span>      
+            <span class="label" ng-class="{'label-info': overStar<neutralIndex, 'label-danger': overStar>neutralIndex}" ng-show="overStar">Your Vote:  {{selectedTitle}}</span>
+          </td>
+        </tr>
+      </table>
 
     </div>
 </div>
 
 </body>
 </html>
+
+
